@@ -1,6 +1,6 @@
 # Collateralized Swap
 
-The Collateralized swap structure is an option where the client, rather than making an upfront cash payment, puts up collateral instead–in this case in the form of a basket of hedge fund investments. For the most part the option acts as an equity swap, with the client paying the returns on a basket of hedge funds and receiving a spread over Libor, with the notional amount resetting periodically.
+The Collateralized swap structure is an option where the client, rather than making an upfront cash payment, puts up collateral instead–in this case in the form of a basket of hedge fund investments. For the most part the option acts as an equity swap (see https://finpricing.com/lib/FxAccumulator.html), with the client paying the returns on a basket of hedge funds and receiving a spread over Libor, with the notional amount resetting periodically.
 
 The value of the collateral affects the current leverage ratio and can trigger re-/de-leveraging or redemption, but otherwise has no affect on the option valuation itself. Nevertheless, to monitor the leverage ratio daily the collateral needs to be MTM daily, and ultimately the dealer’s risk in a situation where the deal must be closed out depends on the closeout value of the collateral.
 
@@ -43,12 +43,6 @@ Note that leverage includes only hedge fund investments, so that redeeming from 
 De-leveraging is accomplished by the client posting additional collateral to reset L to the target, and if the client does not the deal is unwound. Re-leveraging 
 is accomplished by allocating cash in the basket to hedge funds, or by the client providing ‘additional capital’ to be allocated.
 
-
-Reference:
-
-https://finpricing.com/lib/EqSpread.html
-
-https://zenodo.org/record/6539697/files/zenodo-CollateralizedSwap.pdf
 
 https://zenodo.org/record/6539697#.YpDuTKgpDq4
 
